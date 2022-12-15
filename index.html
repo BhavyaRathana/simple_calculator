@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+</head>
+
+<body bgcolor="#d9ffb3" style="
+ align-text:center;
+ ">
+    <center>
+        <h2>SIMPLE CALCULATOR</h2>
+        <hr>
+        <form name="formcalc">
+            Number 1:<input type="number" name="num1"><br><br>
+
+            Number 2:<input type="number" name="num2"><br><br>
+            <input type="button" value="+" onclick="sumValues()">
+            <input type="button" value="-" onclick="subValues()">
+            <input type="button" value="*" onclick="mulValues()">
+            <input type="button" value="/" onclick="divValues()">
+            <br><br>
+            Result :<input type="number"     readonly  name="numres">
+        </form>
+
+        <script type="text/javascript">
+            function sumValues() {
+                var num1, num2, res;
+                num1 = Number(document.formcalc.num1.value);
+                num2 = Number(document.formcalc.num2.value);
+                res = num1 + num2;
+                document.formcalc.numres.value = res;
+            }
+            function subValues() {
+                var num1, num2, res;
+                num1 = Number(document.formcalc.num1.value);
+                num2 = Number(document.formcalc.num2.value);
+                res = num1 - num2;
+                document.formcalc.numres.value = res;
+            }
+            function mulValues() {
+                var num1, num2, res;
+                num1 = Number(document.formcalc.num1.value);
+                num2 = Number(document.formcalc.num2.value);
+                res = num1 * num2;
+                document.formcalc.numres.value = res;
+            }
+            function divValues() {
+                var num1, num2, res;
+                num1 = Number(document.formcalc.num1.value);
+                num2 = Number(document.formcalc.num2.value);
+                res = num1 / num2;
+                document.formcalc.numres.value = res;
+            }
+        </script>
+
+
+    </center>
+
+
+</body>
+
+</html>
